@@ -19,6 +19,7 @@
 .hg{min-height:calc(100svh - 76px);position:relative;display:block;padding-top:clamp(60px,8vh,105px);padding-bottom:70px}
 .hg>div:first-child{position:relative;z-index:4;max-width:760px}.hero .ey{color:#dff4fb}.hero h1{font-size:clamp(82px,10.5vw,168px);line-height:1.04;color:#fff;text-shadow:0 3px 28px rgba(0,0,0,.12);margin:25px 0 20px}.hero .lead{color:#fff;font-size:clamp(14px,1.2vw,18px);font-weight:600;letter-spacing:.09em}.hero .btn{border-color:#fff;background:#fff;color:#12384c}.hero .btn.alt{background:transparent;color:#fff}.hero .art{display:none}.hero-en{position:absolute;right:0;top:9%;writing-mode:vertical-rl;font:400 11px/1.7 Georgia,serif;letter-spacing:.25em;color:#fff;opacity:.9;z-index:5}.hero-place{position:absolute;right:0;bottom:48px;z-index:5;text-align:right;color:#fff}.hero-place strong{display:block;font:500 clamp(26px,3vw,46px)/1.25 var(--s);letter-spacing:.08em}.hero-place span{display:block;font:400 10px Georgia,serif;letter-spacing:.22em;margin-top:8px}.hero-scroll{position:absolute;left:0;bottom:42px;color:#fff;font-size:9px;letter-spacing:.22em;display:flex;align-items:center;gap:13px}.hero-scroll:after{content:"";width:62px;height:1px;background:#fff}.ribbon{background:#f4f6f4}.story{position:relative}.story:after{content:"FROM THE DRINKER";position:absolute;right:0;top:8px;font:400 10px Georgia,serif;letter-spacing:.25em;color:#0785b8}.dark{position:relative;overflow:hidden;background:#082a3b}.dark:before{content:"SHIRAMINE / HAKUSAN";position:absolute;right:-12px;top:25px;font:400 clamp(44px,8vw,120px)/1 Georgia,serif;letter-spacing:.03em;color:#fff;opacity:.035;white-space:nowrap}.landart{height:520px;border:0;background:linear-gradient(180deg,rgba(8,42,59,.02),rgba(8,42,59,.82)),url('assets/gozen-shiramine-main.jpeg') 27% 28%/180% auto no-repeat;box-shadow:inset 0 0 0 1px rgba(255,255,255,.15)}.landart:after{content:"白峰 / SHIRAMINE";left:30px;bottom:26px;border:0;padding:0;font:500 28px var(--s);letter-spacing:.08em}.nature-kicker{display:block;margin-bottom:16px;font:400 10px Georgia,serif;letter-spacing:.25em;color:#a8d5e4}.nature-big{font:500 clamp(42px,5.8vw,86px)/1.35 var(--s);letter-spacing:.02em;margin-bottom:28px}.nature-facts{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.25);margin-top:34px}.nature-facts div{background:#082a3b;padding:20px 15px}.nature-facts b{display:block;font:500 22px var(--s);margin-bottom:4px}.nature-facts span{font-size:9px;letter-spacing:.12em;color:#bcd4dc}.teaser{margin-top:0}.tv{background:#edf4f5 url('assets/gozen-botanicals.png') center/92% auto no-repeat;position:relative}.tv b{display:none}.tv:after{content:"BOTANICALS OF ISHIKAWA";position:absolute;left:28px;bottom:22px;font:400 9px Georgia,serif;letter-spacing:.24em;color:#12384c}.tt .ey:after{content:" / CRAFT GIN FROM SHIRAMINE";font:400 9px Georgia,serif;letter-spacing:.16em;color:#0785b8}.company .ey:after{content:" / DISTILLERY";font:400 9px Georgia,serif;letter-spacing:.16em;color:#0785b8}
 @media(max-width:650px){.hero:before{background-position:62% 50%}.hero:after{background:linear-gradient(180deg,rgba(5,22,33,.25),rgba(5,22,33,.06) 28%,rgba(5,22,33,.78) 70%,rgba(5,22,33,.92))}.hg{min-height:760px;padding-top:44px;display:flex;align-items:flex-end;padding-bottom:110px}.hg>div:first-child{max-width:none;width:100%}.hero h1{font-size:clamp(66px,19vw,96px);line-height:1.02;margin:16px 0}.hero .lead{width:100%;font-size:12px}.hero .actions{display:grid;grid-template-columns:1fr 1fr;gap:8px}.hero .btn{min-width:0;margin:10px 0 0;padding:12px;font-size:10px}.hero-en{right:12px;top:28px;font-size:8px}.hero-place{right:0;bottom:30px}.hero-place strong{font-size:22px}.hero-place span{font-size:8px}.hero-scroll{display:none}.story:after{display:none}.landart{height:380px;background-position:35% 32%;background-size:230% auto}.nature-big{font-size:40px}.nature-facts{grid-template-columns:1fr}.nature-facts div{padding:14px}.tv{background-size:150% auto;background-position:center}.tt .ey:after,.company .ey:after{display:none}}
+.hero.hero-video .hero-credit{margin:18px 0 0;color:rgba(255,255,255,.78);font-size:10px;letter-spacing:.08em}.hero.hero-video .hero-credit a{color:inherit}@media(max-width:650px){.hero.hero-video .hero-credit{font-size:9px;line-height:1.7}}
 </style>
 <style>
 /* ===== TOP V3 : DRINK THE LAND / SHIRAMINE ===== */
@@ -266,19 +267,59 @@ html.is-loading,html.is-loading body{overflow:hidden}
 
 
 
+
+<style id="top-hero-v17-video">
+.hero.hero-video{
+  position:relative;min-height:calc(100svh - 76px);overflow:hidden;isolation:isolate;
+  background:#08131a;color:#fff
+}
+.hero.hero-video .hero-media,
+.hero.hero-video .hero-poster,
+.hero.hero-video .hero-film,
+.hero.hero-video .hero-overlay,
+.hero.hero-video .hero-vignette,
+.hero.hero-video .hero-light{position:absolute;inset:0}
+.hero.hero-video .hero-media{width:100%;height:100%;object-fit:cover;object-position:center center;z-index:0;filter:saturate(.92) contrast(1.03) brightness(.78)}
+.hero.hero-video .hero-poster{background:url('assets/urara-shiramine-poster.jpg') center center/cover no-repeat;z-index:-1}
+.hero.hero-video .hero-overlay{z-index:1;background:linear-gradient(90deg,rgba(4,14,22,.74) 0%,rgba(4,14,22,.46) 33%,rgba(4,14,22,.14) 60%,rgba(4,14,22,.28) 100%),linear-gradient(180deg,rgba(4,14,22,.08) 0%,rgba(4,14,22,0) 28%,rgba(4,14,22,.56) 100%)}
+.hero.hero-video .hero-light{z-index:2;mix-blend-mode:screen;background:radial-gradient(circle at 17% 36%,rgba(255,225,190,.22),transparent 14%),radial-gradient(circle at 23% 28%,rgba(244,251,255,.14),transparent 18%)}
+.hero.hero-video .hero-film{z-index:3;opacity:.045;mix-blend-mode:soft-light;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180' viewBox='0 0 180 180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E")}
+.hero.hero-video .hero-vignette{z-index:3;pointer-events:none;box-shadow:inset 0 0 180px rgba(0,0,0,.16), inset 0 -110px 120px rgba(0,0,0,.18)}
+.hero.hero-video .hg{position:relative;z-index:5;min-height:calc(100svh - 76px);display:flex;align-items:flex-end;padding-top:clamp(88px,12vh,140px);padding-bottom:60px}
+.hero.hero-video .hero-copy{max-width:700px}
+.hero.hero-video .hero-copy .ey{color:#ecf8fc}
+.hero.hero-video h1{font:500 clamp(84px,10vw,168px)/1.02 var(--s);letter-spacing:-.055em;color:#fff;text-shadow:0 8px 34px rgba(0,0,0,.18);margin:22px 0 18px}
+.hero.hero-video h1 span{display:block}
+.hero.hero-video .lead{max-width:450px;color:#fff;font-size:clamp(14px,1.1vw,17px);font-weight:500;line-height:1.95;letter-spacing:.08em;text-shadow:0 1px 16px rgba(0,0,0,.16)}
+.hero.hero-video .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+.hero.hero-video .btn{background:#fff;color:#12384c;border-color:#fff;backdrop-filter:blur(8px)}
+.hero.hero-video .btn.alt{background:rgba(255,255,255,.05);color:#fff}
+.hero.hero-video .hero-foot{display:flex;gap:16px;align-items:center;margin-top:36px;color:#fff;font-size:9px;letter-spacing:.24em;opacity:.9}
+.hero.hero-video .hero-foot:after{content:"";width:72px;height:1px;background:#fff}
+@media(max-width:650px){
+  .hero.hero-video .hero-media{object-position:68% center}
+  .hero.hero-video .hero-overlay{background:linear-gradient(180deg,rgba(4,14,22,.16) 0%,rgba(4,14,22,.08) 18%,rgba(4,14,22,.70) 58%,rgba(4,14,22,.92) 100%)}
+  .hero.hero-video .hg{min-height:760px;padding-top:42px;padding-bottom:36px}
+  .hero.hero-video h1{font-size:clamp(64px,17vw,92px);margin:16px 0 14px}
+  .hero.hero-video .lead{max-width:none;font-size:12px;line-height:1.85}
+  .hero.hero-video .actions{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+  .hero.hero-video .btn{padding:12px;min-width:0;font-size:10px}
+  .hero.hero-video .hero-foot{display:none}
+}
+</style>
 <style id="official-logo-overrides">
 .official-logo{display:block;width:auto;height:auto;object-fit:contain}
 .official-logo-link{display:flex;align-items:center;flex:0 0 auto}
 .header-official-logo{width:clamp(205px,20vw,320px)!important;max-height:55px!important}
 .footer-official-logo{width:clamp(138px,13.5vw,180px)!important;background:transparent!important;padding:0!important;filter:brightness(0) invert(1);opacity:.92}
-@media(max-width:700px){.header-official-logo{width:175px!important}.footer-official-logo{width:min(42vw,150px)!important}}
+@media(max-width:700px){.header-official-logo{width:175px!important}.footer-official-logo{width:clamp(138px,13.5vw,180px)!important;background:transparent!important;padding:0!important;filter:brightness(0) invert(1);opacity:.92}}
 @media(max-width:420px){.header-official-logo{width:160px}.shop{font-size:9px;padding:7px 8px}}
 @media(prefers-reduced-motion:reduce){}
 </style>
 
 
 <style id="v6-image-overrides">
-.hero:before{background-image:url('assets/gozen-shiramine-main.jpeg')!important;background-position:center 48%!important;background-size:cover!important}.hero:after{background:linear-gradient(90deg,rgba(5,22,33,.84) 0%,rgba(5,22,33,.55) 38%,rgba(5,22,33,.02) 70%),linear-gradient(0deg,rgba(5,22,33,.5),transparent 45%)!important}.landart{background:linear-gradient(180deg,rgba(8,42,59,.04),rgba(8,42,59,.72)),url('assets/gozen-shiramine-main.jpeg') center 36%/cover no-repeat!important}.tv{background:url('assets/gozen-shiramine-main.jpeg') center 58%/cover no-repeat!important}.tv:after{content:"WHITE PEAK / PURE WATER / LOCAL BOTANICALS"!important}.header-official-logo{width:clamp(205px,20vw,320px)!important;max-height:55px!important}.footer-official-logo{filter:none!important;background:#fff;padding:12px;width:clamp(250px,28vw,390px)!important}
+.hero:before{background-image:url('assets/gozen-shiramine-main.jpeg')!important;background-position:center 48%!important;background-size:cover!important}.hero:after{background:linear-gradient(90deg,rgba(5,22,33,.84) 0%,rgba(5,22,33,.55) 38%,rgba(5,22,33,.02) 70%),linear-gradient(0deg,rgba(5,22,33,.5),transparent 45%)!important}.landart{background:linear-gradient(180deg,rgba(8,42,59,.04),rgba(8,42,59,.72)),url('assets/gozen-shiramine-main.jpeg') center 36%/cover no-repeat!important}.tv{background:url('assets/gozen-shiramine-main.jpeg') center 58%/cover no-repeat!important}.tv:after{content:"WHITE PEAK / PURE WATER / LOCAL BOTANICALS"!important}.header-official-logo{width:clamp(205px,20vw,320px)!important;max-height:55px!important}.footer-official-logo{width:clamp(138px,13.5vw,180px)!important;background:transparent!important;padding:0!important;filter:brightness(0) invert(1);opacity:.92}
 @media(max-width:650px){.hero:before{background-position:59% 48%!important}.landart{background-position:center 38%!important}.tv{background-position:center 56%!important}.header-official-logo{width:175px!important}}
 </style>
 <style id="gozen-origin-v12">
@@ -357,30 +398,25 @@ html.is-loading,html.is-loading body{overflow:hidden}
 </div>
 
 <header><div class="w head"><a class="logo official-logo-link" href="#top" aria-label="白峰蒸溜所 ホーム"><img class="official-logo header-official-logo" src="assets/shiramine-logo-official.png" alt="白峰蒸溜所 SHIRAMINE DISTILLERY"></a><nav class="nav"><a href="#top/story">蒸溜所について</a><a href="#gozen">GOZEN</a><a href="#contact">お問い合わせ</a></nav><a class="shop" href="#gozen/stores">飲める・買えるお店</a></div></header><main>
-<article class="page" data-page="top"><section class="hero hero-cinematic">
-  <div class="hero-scene" aria-hidden="true">
-    <div class="hero-land"></div>
-    <div class="hero-land-soft"></div>
-    <div class="hero-land-glow"></div>
-    <div class="hero-overlay"></div>
-    <div class="hero-light"></div>
-    <div class="hero-mist mist-1"></div>
-    <div class="hero-mist mist-2"></div>
-    <div class="hero-mist mist-3"></div>
-    <div class="hero-river"></div>
-    <div class="hero-vignette"></div>
-    <div class="hero-grain"></div>
-  </div>
+<article class="page" data-page="top"><section class="hero hero-video">
+  <div class="hero-poster" aria-hidden="true"></div>
+  <video class="hero-media" autoplay muted loop playsinline preload="auto" poster="assets/urara-shiramine-poster.jpg" aria-label="白峰の公式写真をもとに制作した夜明けの白山風景映像">
+    <source src="assets/urara-shiramine-hero.mp4" type="video/mp4">
+  </video>
+  <div class="hero-overlay" aria-hidden="true"></div>
+  <div class="hero-light" aria-hidden="true"></div>
+  <div class="hero-vignette" aria-hidden="true"></div>
+  <div class="hero-film" aria-hidden="true"></div>
   <div class="w hg">
     <div class="hero-copy">
       <p class="ey">白山の麓で生まれた、クラフトジン。 / CRAFTED IN SHIRAMINE</p>
       <h1><span>白峰を、</span><span>飲む。</span></h1>
-      <p class="lead">白山の水と、この土地の香りから。<br>静かで雄大な自然が、GOZENの一杯になる。</p>
+      <p class="lead">白峰に差し込む朝の光、澄んだ空気、山の静けさ。<br>この土地の気配そのものを、GOZENの一杯へ。</p>
       <div class="actions">
         <a class="btn" href="#gozen">GOZENを知る →</a>
         <a class="btn alt" href="#gozen/stores">飲める・買えるお店 →</a>
       </div>
-      <span class="hero-foot">SCROLL TO DISCOVER</span>
+      <span class="hero-foot">SCROLL TO DISCOVER</span><p class="hero-credit">Photo source: ©白山市観光連盟 / 「西山の紅葉と冠雪の白山」</p>
     </div>
   </div>
 </section>
@@ -586,7 +622,7 @@ html.is-loading,html.is-loading body{overflow:hidden}
 </article>
 <article class="page" data-page="contact" hidden><div class="w crumb"><a href="#top">ホーム</a> ／ お問い合わせ</div><section class="w contact"><div><p class="ey">お問い合わせ</p><h1>お話を、<br>聞かせてください。</h1><p class="copy">GOZENのお取扱い、商品についてのご質問、取材のご相談など、こちらからお問い合わせください。</p><a class="btn alt" href="#gozen/stores">飲める・買えるお店 →</a></div><div><div class="notice">このHTMLはPHPフォームのフロントエンドです。実際の送信には、公開サーバー側で <strong>contact.php</strong> を設置し、送信先・CSRF対策・迷惑送信対策を設定してください。実在しない送信APIは使用していません。</div><form method="post" action="contact.php"><div class="field"><div class="ft"><label for="kind">お問い合わせの種類</label><span class="req">必須</span></div><select id="kind" name="kind" required><option value="">選択してください</option><option value="business">お取扱い・仕入れのご相談</option><option value="product">商品について</option><option value="press">取材について</option><option value="other">その他</option></select></div><div class="field"><div class="ft"><label for="name">お名前</label><span class="req">必須</span></div><input id="name" name="name" autocomplete="name" required maxlength="100"></div><div class="field"><div class="ft"><label for="company">会社名・店舗名</label><span class="req">任意</span></div><input id="company" name="company" autocomplete="organization" maxlength="150"></div><div class="field"><div class="ft"><label for="email">メールアドレス</label><span class="req">必須</span></div><input id="email" name="email" type="email" autocomplete="email" required maxlength="254"></div><div class="field"><div class="ft"><label for="phone">電話番号</label><span class="req">任意</span></div><input id="phone" name="phone" type="tel" autocomplete="tel" maxlength="40"></div><div class="field"><div class="ft"><label for="message">お問い合わせ内容</label><span class="req">必須</span></div><textarea id="message" name="message" required maxlength="4000"></textarea></div><details class="privacy"><summary>個人情報の取扱い</summary><p>ご入力いただいた情報は、お問い合わせへの対応と、そのために必要なご連絡に使用します。</p></details><label class="check"><input type="checkbox" name="consent" value="yes" required><span>個人情報の取扱いを確認し、同意します。</span></label><button class="btn" type="submit">お問い合わせを送信する →</button></form></div></section></article>
 </main>
-<footer><div class="w"><div class="foot"><div><div class="logo"><img class="official-logo footer-official-logo" src="assets/shiramine-logo-official.png" alt="白峰蒸溜所 SHIRAMINE DISTILLERY"></div><p style="font-size:11px;margin-top:15px">〒920-2501<br>石川県白山市白峰ロ136-1</p></div><div class="footnav"><div><a href="#top/story">私たちの想い</a><a href="#gozen">GOZEN</a></div><div><a href="#gozen/drink">飲めるお店</a><a href="#gozen/buy">買えるお店</a><a href="#contact">お問い合わせ</a></div></div></div><p class="footerbig">白峰の自然を、一杯に。</p><div class="legal"><strong>お酒は20歳になってから。お酒は適量を。</strong><br>飲酒運転は法律で禁止されています。妊娠中や授乳期の飲酒は、胎児・乳児の発育に悪影響を与えるおそれがあります。</div></div></footer>
+<footer><div class="w"><div class="foot"><div><div class="logo"><img class="official-logo footer-official-logo" src="assets/shiramine-logo-official.png" alt="白峰蒸溜所 SHIRAMINE DISTILLERY"></div><p style="font-size:11px;margin-top:15px">〒920-2501<br>石川県白山市白峰ロ136-1</p></div><div class="footnav"><div><a href="#top/story">私たちの想い</a><a href="#gozen">GOZEN</a></div><div><a href="#gozen/drink">飲めるお店</a><a href="#gozen/buy">買えるお店</a><a href="#contact">お問い合わせ</a></div></div></div><p class="footerbig">白峰の自然を、一杯に。</p><div class="legal"><strong>お酒は20歳になってから。お酒は適量を。</strong><br>トップビジュアル写真素材：©白山市観光連盟（「西山の紅葉と冠雪の白山」をもとに動画化）<br>飲酒運転は法律で禁止されています。妊娠中や授乳期の飲酒は、胎児・乳児の発育に悪影響を与えるおそれがあります。</div></div></footer>
 <script>
 (()=>{const pages=[...document.querySelectorAll('[data-page]')];const kinds=['business','product','press','other'];function route(){let x=location.hash.replace(/^#/,'').split('/');let p=['top','gozen','contact'].includes(x[0])?x[0]:'top';pages.forEach(e=>e.hidden=e.dataset.page!==p);document.title=p==='gozen'?'GOZEN｜白峰蒸溜所':p==='contact'?'お問い合わせ｜白峰蒸溜所':'白峰蒸溜所｜白峰を、飲む。';requestAnimationFrame(()=>{let t=x[1]&&document.getElementById(x[1]);if(t&&document.querySelector('[data-page="'+p+'"]').contains(t))t.scrollIntoView();else scrollTo(0,0);if(p==='contact'&&kinds.includes(x[1])){let s=document.getElementById('kind');if(s)s.value=x[1]}})}addEventListener('hashchange',route);route()})();
 </script>
@@ -594,53 +630,13 @@ html.is-loading,html.is-loading body{overflow:hidden}
 
 
 
-<script id="hero-motion-script">
+<script id="hero-video-script">
 (function(){
-  if(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  var hero=document.querySelector('.hero-cinematic');
-  if(!hero) return;
-  var land=hero.querySelector('.hero-land');
-  var soft=hero.querySelector('.hero-land-soft');
-  var glow=hero.querySelector('.hero-land-glow');
-  var light=hero.querySelector('.hero-light');
-  var m1=hero.querySelector('.mist-1');
-  var m2=hero.querySelector('.mist-2');
-  var m3=hero.querySelector('.mist-3');
-  var river=hero.querySelector('.hero-river');
-  var grain=hero.querySelector('.hero-grain');
-  var tx=0,ty=0,x=0,y=0,start=performance.now();
-  function onMove(e){
-    var r=hero.getBoundingClientRect();
-    tx=((e.clientX-r.left)/r.width)-0.5;
-    ty=((e.clientY-r.top)/r.height)-0.5;
-  }
-  function reset(){tx=0;ty=0}
-  hero.addEventListener('pointermove',onMove);
-  hero.addEventListener('pointerleave',reset);
-  function set(el,xv,yv,s){ if(el) el.style.transform='translate3d('+xv+'px,'+yv+'px,0) scale('+s+')'; }
-  function frame(t){
-    var tm=(t-start)/1000;
-    x += (tx-x)*0.03;
-    y += (ty-y)*0.03;
-    var sc=Math.min(window.scrollY||0, window.innerHeight||1000);
-    set(land, x*-6 + Math.sin(tm*0.14)*7, y*-4 + (sc*-0.014), 1.03 + Math.sin(tm*0.08)*0.008);
-    set(soft, x*10 + Math.cos(tm*0.12)*9, y*6 + (sc*-0.024), 1.06 + Math.cos(tm*0.10)*0.01);
-    set(glow, x*6 + Math.sin(tm*0.1)*5, y*4 + (sc*-0.018), 1.035);
-    if(light){
-      light.style.transform='translate3d('+(x*8 + Math.sin(tm*0.2)*12)+'px,'+(y*5 + Math.cos(tm*0.16)*8)+'px,0)';
-      light.style.opacity=String(0.84 + ((Math.sin(tm*0.34)+1)/2)*0.08);
-    }
-    if(m1) m1.style.transform='translate3d('+(tm*2.8%60)+'px,'+(-6+Math.sin(tm*0.18)*6)+'px,0)';
-    if(m2) m2.style.transform='translate3d('+(Math.sin(tm*0.2)*12)+'px,'+(Math.cos(tm*0.16)*6)+'px,0)';
-    if(m3) m3.style.transform='translate3d('+(-(tm*2.2%50))+'px,'+(Math.sin(tm*0.12)*5)+'px,0)';
-    if(river){
-      river.style.transform='translate3d('+(x*6 + Math.sin(tm*0.25)*8)+'px,'+(y*2 + Math.sin(tm*0.38)*2)+'px,0) rotate('+(-5+Math.sin(tm*0.18)*0.8)+'deg)';
-      river.style.opacity=String(0.2 + ((Math.sin(tm*0.42)+1)/2)*0.05);
-    }
-    if(grain) grain.style.backgroundPosition=(tm*6%180)+'px '+(tm*4%180)+'px';
-    requestAnimationFrame(frame);
-  }
-  requestAnimationFrame(frame);
+  var video=document.querySelector('.hero-video .hero-media');
+  if(!video) return;
+  var tryPlay=function(){ var p=video.play(); if(p&&p.catch){p.catch(function(){});} };
+  document.addEventListener('visibilitychange', function(){ if(!document.hidden) tryPlay(); });
+  window.addEventListener('load', tryPlay);
 })();
 </script>
 
