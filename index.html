@@ -268,26 +268,42 @@ html.is-loading,html.is-loading body{overflow:hidden}
 
 
 
-<style id="top-hero-v19-video">
-.hero.hero-video{position:relative;min-height:calc(100svh - 76px);overflow:hidden;isolation:isolate;background:#08131a;color:#fff}
-.hero.hero-video .hero-media,.hero.hero-video .hero-poster,.hero.hero-video .hero-film,.hero.hero-video .hero-overlay,.hero.hero-video .hero-vignette,.hero.hero-video .hero-light{position:absolute;inset:0}
-.hero.hero-video .hero-media{width:100%;height:100%;object-fit:cover;object-position:center center;z-index:0;filter:saturate(.92) contrast(1.03) brightness(.8)}
-.hero.hero-video .hero-media-mobile,.hero.hero-video .hero-poster-mobile{display:none}
-.hero.hero-video .hero-poster-desktop{background:url('assets/urara-shiramine-poster-desktop.jpg') center center/cover no-repeat;z-index:-1}
-.hero.hero-video .hero-poster-mobile{background:url('assets/urara-shiramine-poster-mobile.jpg') center center/cover no-repeat;z-index:-1}
-.hero.hero-video .hero-overlay{z-index:1;background:linear-gradient(90deg,rgba(4,14,22,.74) 0%,rgba(4,14,22,.48) 33%,rgba(4,14,22,.16) 60%,rgba(4,14,22,.28) 100%),linear-gradient(180deg,rgba(4,14,22,.06) 0%,rgba(4,14,22,0) 28%,rgba(4,14,22,.56) 100%)}
-.hero.hero-video .hero-light{z-index:2;mix-blend-mode:screen;background:radial-gradient(circle at 18% 34%,rgba(255,225,190,.22),transparent 14%),radial-gradient(circle at 24% 28%,rgba(244,251,255,.14),transparent 18%)}
-.hero.hero-video .hero-film{z-index:3;opacity:.04;mix-blend-mode:soft-light;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180' viewBox='0 0 180 180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E")}
-.hero.hero-video .hero-vignette{z-index:3;pointer-events:none;box-shadow:inset 0 0 180px rgba(0,0,0,.14), inset 0 -110px 120px rgba(0,0,0,.22)}
-.hero.hero-video .hg{position:relative;z-index:5;min-height:calc(100svh - 76px);display:flex;align-items:flex-end;padding-top:clamp(88px,12vh,140px);padding-bottom:60px}
-.hero.hero-video .hero-copy{max-width:720px}.hero.hero-video .hero-copy .ey{color:#ecf8fc}
-.hero.hero-video h1{font:500 clamp(84px,10vw,168px)/1.02 var(--s);letter-spacing:-.055em;color:#fff;text-shadow:0 8px 34px rgba(0,0,0,.22);margin:22px 0 18px}.hero.hero-video h1 span{display:block}
-.hero.hero-video .lead{max-width:490px;color:#fff;font-size:clamp(14px,1.1vw,17px);font-weight:500;line-height:1.95;letter-spacing:.08em;text-shadow:0 1px 16px rgba(0,0,0,.18)}
-.hero.hero-video .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}.hero.hero-video .btn{background:#fff;color:#12384c;border-color:#fff;backdrop-filter:blur(8px)}.hero.hero-video .btn.alt{background:rgba(255,255,255,.06);color:#fff}
-.hero.hero-video .hero-foot{display:flex;gap:16px;align-items:center;margin-top:36px;color:#fff;font-size:9px;letter-spacing:.24em;opacity:.9}.hero.hero-video .hero-foot:after{content:"";width:72px;height:1px;background:#fff}
-.hero.hero-video .hero-credit{margin:18px 0 0;color:rgba(255,255,255,.78);font-size:10px;letter-spacing:.08em;line-height:1.7;max-width:560px}
-@media(max-width:820px){.hero.hero-video .hg{padding-bottom:48px}.hero.hero-video .hero-copy{max-width:86vw}}
-@media(max-width:650px){.hero.hero-video{min-height:100svh}.hero.hero-video .hero-media-desktop,.hero.hero-video .hero-poster-desktop{display:none}.hero.hero-video .hero-media-mobile,.hero.hero-video .hero-poster-mobile{display:block}.hero.hero-video .hero-overlay{background:linear-gradient(180deg,rgba(4,14,22,.14) 0%,rgba(4,14,22,.06) 18%,rgba(4,14,22,.64) 58%,rgba(4,14,22,.92) 100%)}.hero.hero-video .hero-light{background:radial-gradient(circle at 30% 22%,rgba(255,225,190,.2),transparent 18%),radial-gradient(circle at 46% 18%,rgba(244,251,255,.12),transparent 22%)}.hero.hero-video .hg{min-height:100svh;padding-top:34px;padding-bottom:28px;align-items:flex-end}.hero.hero-video .hero-copy{max-width:none;width:100%}.hero.hero-video h1{font-size:clamp(58px,15vw,82px);margin:14px 0 12px}.hero.hero-video .lead{max-width:92%;font-size:12px;line-height:1.82}.hero.hero-video .actions{display:grid;grid-template-columns:1fr;gap:10px}.hero.hero-video .btn{padding:13px 14px;min-width:0;font-size:10px;justify-content:space-between}.hero.hero-video .hero-foot{display:none}.hero.hero-video .hero-credit{font-size:9px;max-width:100%;margin-top:14px}}
+<style id="top-hero-v20-slideshow">
+.hero.hero-slideshow{position:relative;min-height:calc(100svh - 76px);overflow:hidden;isolation:isolate;background:#08131a;color:#fff}
+.hero.hero-slideshow .hero-slides,.hero.hero-slideshow .hero-overlay,.hero.hero-slideshow .hero-vignette,.hero.hero-slideshow .hero-light,.hero.hero-slideshow .hero-film{position:absolute;inset:0}
+.hero.hero-slideshow .hero-slides{z-index:0}
+.hero.hero-slideshow .hero-slides-mobile{display:none}
+.hero.hero-slideshow .slide{position:absolute;inset:0;opacity:0;transform:scale(1.06);transition:opacity 1.35s ease, transform 7.2s ease;will-change:opacity,transform;background-repeat:no-repeat;background-size:cover;background-position:center center;filter:saturate(.93) contrast(1.03) brightness(.8)}
+.hero.hero-slideshow .slide.is-active{opacity:1;transform:scale(1.0)}
+.hero.hero-slideshow .slide::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,0) 35%, rgba(255,255,255,.03) 65%, rgba(255,255,255,0) 100%)}
+.hero.hero-slideshow .d1{background-image:url('assets/slide-d1.jpg')}
+.hero.hero-slideshow .d2{background-image:url('assets/slide-d2.jpg')}
+.hero.hero-slideshow .d3{background-image:url('assets/slide-d3.jpg')}
+.hero.hero-slideshow .d4{background-image:url('assets/slide-d4.jpg')}
+.hero.hero-slideshow .m1{background-image:url('assets/slide-m1.jpg')}
+.hero.hero-slideshow .m2{background-image:url('assets/slide-m2.jpg')}
+.hero.hero-slideshow .m3{background-image:url('assets/slide-m3.jpg')}
+.hero.hero-slideshow .m4{background-image:url('assets/slide-m4.jpg')}
+.hero.hero-slideshow .hero-overlay{z-index:1;background:linear-gradient(90deg,rgba(4,14,22,.74) 0%,rgba(4,14,22,.48) 33%,rgba(4,14,22,.16) 60%,rgba(4,14,22,.28) 100%),linear-gradient(180deg,rgba(4,14,22,.06) 0%,rgba(4,14,22,0) 28%,rgba(4,14,22,.56) 100%)}
+.hero.hero-slideshow .hero-light{z-index:2;mix-blend-mode:screen;background:radial-gradient(circle at 18% 34%,rgba(255,225,190,.22),transparent 14%),radial-gradient(circle at 24% 28%,rgba(244,251,255,.14),transparent 18%)}
+.hero.hero-slideshow .hero-film{z-index:3;opacity:.04;mix-blend-mode:soft-light;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180' viewBox='0 0 180 180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E")}
+.hero.hero-slideshow .hero-vignette{z-index:3;pointer-events:none;box-shadow:inset 0 0 180px rgba(0,0,0,.14), inset 0 -110px 120px rgba(0,0,0,.22)}
+.hero.hero-slideshow .hero-mist,.hero.hero-slideshow .hero-mist::before,.hero.hero-slideshow .hero-mist::after{position:absolute;inset:auto;content:"";pointer-events:none;border-radius:999px;filter:blur(28px)}
+.hero.hero-slideshow .hero-mist{z-index:2;left:-6%;bottom:8%;width:42vw;height:12vw;background:rgba(255,255,255,.12);animation:mistDriftA 24s linear infinite}
+.hero.hero-slideshow .hero-mist::before{left:28%;top:-12%;width:32vw;height:10vw;background:rgba(255,255,255,.08);animation:mistDriftB 28s linear infinite}
+.hero.hero-slideshow .hero-mist::after{right:-14%;top:-220%;width:26vw;height:9vw;background:rgba(255,255,255,.08);animation:mistDriftC 30s linear infinite}
+.hero.hero-slideshow .hg{position:relative;z-index:5;min-height:calc(100svh - 76px);display:flex;align-items:flex-end;padding-top:clamp(88px,12vh,140px);padding-bottom:60px}
+.hero.hero-slideshow .hero-copy{max-width:720px}.hero.hero-slideshow .hero-copy .ey{color:#ecf8fc}
+.hero.hero-slideshow h1{font:500 clamp(84px,10vw,168px)/1.02 var(--s);letter-spacing:-.055em;color:#fff;text-shadow:0 8px 34px rgba(0,0,0,.22);margin:22px 0 18px}.hero.hero-slideshow h1 span{display:block}
+.hero.hero-slideshow .lead{max-width:490px;color:#fff;font-size:clamp(14px,1.1vw,17px);font-weight:500;line-height:1.95;letter-spacing:.08em;text-shadow:0 1px 16px rgba(0,0,0,.18)}
+.hero.hero-slideshow .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}.hero.hero-slideshow .btn{background:#fff;color:#12384c;border-color:#fff;backdrop-filter:blur(8px)}.hero.hero-slideshow .btn.alt{background:rgba(255,255,255,.06);color:#fff}
+.hero.hero-slideshow .hero-foot{display:flex;gap:16px;align-items:center;margin-top:36px;color:#fff;font-size:9px;letter-spacing:.24em;opacity:.9}.hero.hero-slideshow .hero-foot:after{content:"";width:72px;height:1px;background:#fff}
+.hero.hero-slideshow .hero-credit{margin:18px 0 0;color:rgba(255,255,255,.78);font-size:10px;letter-spacing:.08em;line-height:1.7;max-width:560px}
+@keyframes mistDriftA{0%{transform:translate3d(0,0,0)}50%{transform:translate3d(5vw,-1vw,0)}100%{transform:translate3d(0,0,0)}}
+@keyframes mistDriftB{0%{transform:translate3d(0,0,0)}50%{transform:translate3d(-4vw,.8vw,0)}100%{transform:translate3d(0,0,0)}}
+@keyframes mistDriftC{0%{transform:translate3d(0,0,0)}50%{transform:translate3d(-3vw,-.7vw,0)}100%{transform:translate3d(0,0,0)}}
+@media(max-width:820px){.hero.hero-slideshow .hg{padding-bottom:48px}.hero.hero-slideshow .hero-copy{max-width:86vw}}
+@media(max-width:650px){.hero.hero-slideshow{min-height:100svh}.hero.hero-slideshow .hero-slides-desktop{display:none}.hero.hero-slideshow .hero-slides-mobile{display:block}.hero.hero-slideshow .hero-overlay{background:linear-gradient(180deg,rgba(4,14,22,.14) 0%,rgba(4,14,22,.06) 18%,rgba(4,14,22,.64) 58%,rgba(4,14,22,.92) 100%)}.hero.hero-slideshow .hero-light{background:radial-gradient(circle at 30% 22%,rgba(255,225,190,.2),transparent 18%),radial-gradient(circle at 46% 18%,rgba(244,251,255,.12),transparent 22%)}.hero.hero-slideshow .hero-mist{left:-16%;bottom:14%;width:82vw;height:24vw}.hero.hero-slideshow .hero-mist::before{left:12%;top:-50%;width:60vw;height:18vw}.hero.hero-slideshow .hero-mist::after{right:-6%;top:-190%;width:46vw;height:16vw}.hero.hero-slideshow .hg{min-height:100svh;padding-top:34px;padding-bottom:28px;align-items:flex-end}.hero.hero-slideshow .hero-copy{max-width:none;width:100%}.hero.hero-slideshow h1{font-size:clamp(58px,15vw,82px);margin:14px 0 12px}.hero.hero-slideshow .lead{max-width:92%;font-size:12px;line-height:1.82}.hero.hero-slideshow .actions{display:grid;grid-template-columns:1fr;gap:10px}.hero.hero-slideshow .btn{padding:13px 14px;min-width:0;font-size:10px;justify-content:space-between}.hero.hero-slideshow .hero-foot{display:none}.hero.hero-slideshow .hero-credit{font-size:9px;max-width:100%;margin-top:14px}}
 </style>
 <style id="official-logo-overrides">
 .official-logo{display:block;width:auto;height:auto;object-fit:contain}
@@ -380,17 +396,22 @@ html.is-loading,html.is-loading body{overflow:hidden}
 </div>
 
 <header><div class="w head"><a class="logo official-logo-link" href="#top" aria-label="白峰蒸溜所 ホーム"><img class="official-logo header-official-logo" src="assets/shiramine-logo-official.png" alt="白峰蒸溜所 SHIRAMINE DISTILLERY"></a><nav class="nav"><a href="#top/story">蒸溜所について</a><a href="#gozen">GOZEN</a><a href="#contact">お問い合わせ</a></nav><a class="shop" href="#gozen/stores">飲める・買えるお店</a></div></header><main>
-<article class="page" data-page="top"><section class="hero hero-video">
-  <div class="hero-poster hero-poster-desktop" aria-hidden="true"></div>
-  <div class="hero-poster hero-poster-mobile" aria-hidden="true"></div>
-  <video class="hero-media hero-media-desktop" autoplay muted loop playsinline preload="auto" poster="assets/urara-shiramine-poster-desktop.jpg" aria-label="白峰の風景と街並みの写真をもとに制作したトップ背景映像">
-    <source src="assets/urara-shiramine-hero-desktop.mp4" type="video/mp4">
-  </video>
-  <video class="hero-media hero-media-mobile" autoplay muted loop playsinline preload="auto" poster="assets/urara-shiramine-poster-mobile.jpg" aria-label="白峰の風景と街並みの写真をもとに制作したスマートフォン用トップ背景映像">
-    <source src="assets/urara-shiramine-hero-mobile.mp4" type="video/mp4">
-  </video>
+<article class="page" data-page="top"><section class="hero hero-slideshow">
+  <div class="hero-slides hero-slides-desktop" aria-hidden="true">
+    <div class="slide d1 is-active"></div>
+    <div class="slide d2"></div>
+    <div class="slide d3"></div>
+    <div class="slide d4"></div>
+  </div>
+  <div class="hero-slides hero-slides-mobile" aria-hidden="true">
+    <div class="slide m1 is-active"></div>
+    <div class="slide m2"></div>
+    <div class="slide m3"></div>
+    <div class="slide m4"></div>
+  </div>
   <div class="hero-overlay" aria-hidden="true"></div>
   <div class="hero-light" aria-hidden="true"></div>
+  <div class="hero-mist" aria-hidden="true"></div>
   <div class="hero-vignette" aria-hidden="true"></div>
   <div class="hero-film" aria-hidden="true"></div>
   <div class="w hg">
@@ -609,7 +630,7 @@ html.is-loading,html.is-loading body{overflow:hidden}
 </article>
 <article class="page" data-page="contact" hidden><div class="w crumb"><a href="#top">ホーム</a> ／ お問い合わせ</div><section class="w contact"><div><p class="ey">お問い合わせ</p><h1>お話を、<br>聞かせてください。</h1><p class="copy">GOZENのお取扱い、商品についてのご質問、取材のご相談など、こちらからお問い合わせください。</p><a class="btn alt" href="#gozen/stores">飲める・買えるお店 →</a></div><div><div class="notice">このHTMLはPHPフォームのフロントエンドです。実際の送信には、公開サーバー側で <strong>contact.php</strong> を設置し、送信先・CSRF対策・迷惑送信対策を設定してください。実在しない送信APIは使用していません。</div><form method="post" action="contact.php"><div class="field"><div class="ft"><label for="kind">お問い合わせの種類</label><span class="req">必須</span></div><select id="kind" name="kind" required><option value="">選択してください</option><option value="business">お取扱い・仕入れのご相談</option><option value="product">商品について</option><option value="press">取材について</option><option value="other">その他</option></select></div><div class="field"><div class="ft"><label for="name">お名前</label><span class="req">必須</span></div><input id="name" name="name" autocomplete="name" required maxlength="100"></div><div class="field"><div class="ft"><label for="company">会社名・店舗名</label><span class="req">任意</span></div><input id="company" name="company" autocomplete="organization" maxlength="150"></div><div class="field"><div class="ft"><label for="email">メールアドレス</label><span class="req">必須</span></div><input id="email" name="email" type="email" autocomplete="email" required maxlength="254"></div><div class="field"><div class="ft"><label for="phone">電話番号</label><span class="req">任意</span></div><input id="phone" name="phone" type="tel" autocomplete="tel" maxlength="40"></div><div class="field"><div class="ft"><label for="message">お問い合わせ内容</label><span class="req">必須</span></div><textarea id="message" name="message" required maxlength="4000"></textarea></div><details class="privacy"><summary>個人情報の取扱い</summary><p>ご入力いただいた情報は、お問い合わせへの対応と、そのために必要なご連絡に使用します。</p></details><label class="check"><input type="checkbox" name="consent" value="yes" required><span>個人情報の取扱いを確認し、同意します。</span></label><button class="btn" type="submit">お問い合わせを送信する →</button></form></div></section></article>
 </main>
-<footer><div class="w"><div class="foot"><div><div class="logo"><img class="official-logo footer-official-logo" src="assets/shiramine-logo-official.png" alt="白峰蒸溜所 SHIRAMINE DISTILLERY"></div><p style="font-size:11px;margin-top:15px">〒920-2501<br>石川県白山市白峰ロ136-1</p></div><div class="footnav"><div><a href="#top/story">私たちの想い</a><a href="#gozen">GOZEN</a></div><div><a href="#gozen/drink">飲めるお店</a><a href="#gozen/buy">買えるお店</a><a href="#contact">お問い合わせ</a></div></div></div><p class="footerbig">白峰の自然を、一杯に。</p><div class="legal"><strong>お酒は20歳になってから。お酒は適量を。</strong><br>トップビジュアル写真素材：©白山市観光連盟（「西山の紅葉と冠雪の白山」「白峰町並み」をもとに動画化）<br>飲酒運転は法律で禁止されています。妊娠中や授乳期の飲酒は、胎児・乳児の発育に悪影響を与えるおそれがあります。</div></div></footer>
+<footer><div class="w"><div class="foot"><div><div class="logo"><img class="official-logo footer-official-logo" src="assets/shiramine-logo-official.png" alt="白峰蒸溜所 SHIRAMINE DISTILLERY"></div><p style="font-size:11px;margin-top:15px">〒920-2501<br>石川県白山市白峰ロ136-1</p></div><div class="footnav"><div><a href="#top/story">私たちの想い</a><a href="#gozen">GOZEN</a></div><div><a href="#gozen/drink">飲めるお店</a><a href="#gozen/buy">買えるお店</a><a href="#contact">お問い合わせ</a></div></div></div><p class="footerbig">白峰の自然を、一杯に。</p><div class="legal"><strong>お酒は20歳になってから。お酒は適量を。</strong><br>トップビジュアル写真素材：©白山市観光連盟（「西山の紅葉と冠雪の白山」「白峰町並み」を使用）<br>飲酒運転は法律で禁止されています。妊娠中や授乳期の飲酒は、胎児・乳児の発育に悪影響を与えるおそれがあります。</div></div></footer>
 <script>
 (()=>{const pages=[...document.querySelectorAll('[data-page]')];const kinds=['business','product','press','other'];function route(){let x=location.hash.replace(/^#/,'').split('/');let p=['top','gozen','contact'].includes(x[0])?x[0]:'top';pages.forEach(e=>e.hidden=e.dataset.page!==p);document.title=p==='gozen'?'GOZEN｜白峰蒸溜所':p==='contact'?'お問い合わせ｜白峰蒸溜所':'白峰蒸溜所｜白峰を、飲む。';requestAnimationFrame(()=>{let t=x[1]&&document.getElementById(x[1]);if(t&&document.querySelector('[data-page="'+p+'"]').contains(t))t.scrollIntoView();else scrollTo(0,0);if(p==='contact'&&kinds.includes(x[1])){let s=document.getElementById('kind');if(s)s.value=x[1]}})}addEventListener('hashchange',route);route()})();
 </script>
@@ -617,14 +638,20 @@ html.is-loading,html.is-loading body{overflow:hidden}
 
 
 
-<script id="hero-video-script">
+<script id="hero-slideshow-script">
 (function(){
-  var videos=[].slice.call(document.querySelectorAll('.hero-video video'));
-  if(!videos.length) return;
-  var tryPlay=function(v){var p=v.play(); if(p&&p.catch){p.catch(function(){});}};
-  var playAll=function(){videos.forEach(tryPlay);};
-  document.addEventListener('visibilitychange', function(){ if(!document.hidden) playAll(); });
-  window.addEventListener('load', playAll);
+  var groups = document.querySelectorAll('.hero-slides');
+  if(!groups.length) return;
+  groups.forEach(function(group){
+    var slides = group.querySelectorAll('.slide');
+    if(!slides.length) return;
+    var index = 0;
+    setInterval(function(){
+      slides[index].classList.remove('is-active');
+      index = (index + 1) % slides.length;
+      slides[index].classList.add('is-active');
+    }, 4200);
+  });
 })();
 </script>
 
