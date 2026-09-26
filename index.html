@@ -273,8 +273,8 @@ html.is-loading,html.is-loading body{overflow:hidden}
 .hero.hero-slideshow .hero-slides,.hero.hero-slideshow .hero-overlay,.hero.hero-slideshow .hero-vignette,.hero.hero-slideshow .hero-light,.hero.hero-slideshow .hero-film{position:absolute;inset:0}
 .hero.hero-slideshow .hero-slides{z-index:0}
 .hero.hero-slideshow .hero-slides-mobile{display:none}
-.hero.hero-slideshow .slide{position:absolute;inset:0;opacity:0;transform:scale(1.06);transition:opacity 1.35s ease, transform 7.2s ease;will-change:opacity,transform;background-repeat:no-repeat;background-size:cover;background-position:center center;filter:saturate(.93) contrast(1.03) brightness(.8)}
-.hero.hero-slideshow .slide.is-active{opacity:1;transform:scale(1.0)}
+.hero.hero-slideshow .slide{position:absolute;inset:0;opacity:0;transform:none;transition:opacity 1.35s ease;will-change:opacity;background-repeat:no-repeat;background-size:cover;background-position:center center;filter:saturate(.93) contrast(1.03) brightness(.8)}
+.hero.hero-slideshow .slide.is-active{opacity:1;transform:none}
 .hero.hero-slideshow .slide::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,0) 35%, rgba(255,255,255,.03) 65%, rgba(255,255,255,0) 100%)}
 .hero.hero-slideshow .d1{background-image:url('assets/slide-d1.jpg')}
 .hero.hero-slideshow .d2{background-image:url('assets/slide-d2.jpg')}
